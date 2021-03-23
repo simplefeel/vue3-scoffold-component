@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>vue3 Component</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      window.vue = Vue;
+    </script>
+    <link rel="stylesheet" href="../dist/bundle.css" />
+  </head>
+  <body>
+    <div id="components-demo">
+      <v-count></v-count>
+    </div>
+    <script src="../dist/bundle.js"></script>
+    <script>
+      const { Count } = vui;
+      const { createApp } = Vue;
+      const app = createApp({});
+      app.use(Count);
+      app.mount("#components-demo");
+    </script>
+  </body>
+</html>
